@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf8" />
+    <title>Kitty</title>
+    <link href="kitty.css" rel="stylesheet" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+</style>
+  </head>
+  <body>
+  <div id ="startScene" class="scene">
+	
+    <div id="mainMenu"  class="menu"> 
+	<div class="wrapper flexColomn">
+		<canvas id="catOnMain"></canvas>
+		<img id="gameName" src="src/gameName.png"></img>
+	</div>
+	  <ul> 
+		<li id="clickToStartGame" class="option">НАЧАТЬ ИГРУ<li>
+		<li id="clickHowToPlayMenu" class="option">КАК ИГРАТЬ<li>
+		<li id="clickSettingsMenu" class="option">НАСТРОЙКИ<li>
+		<li id="clickThanksMenu" class="option">БЛАГОДАРНОСТИ<li>
+		<li id="clickProjectDiscriptionMenu" class="option">О ПРОЕКТЕ<li>
+	  </ul>
+	</div>
+  </div>
+  
+  
+  
+  
+  
+  <div id="gameScene" class="scene">
+	<div id="gameSceneWrapper">
+	<img class="gameObject" src="src/bg/0.png"></img>
+	<img class="gameObject" id="dayTime" src="src/bg/morning.png"></img>
+	<img class="gameObject" src="src/bg/window.png"></img>
+	<img class="gameObject" src="src/bg/window_shelf.png"></img>
+	<img id="curtains" class="gameObject" src="src/bg/curtains_closed.png"></img>
+	<img class="gameObject" src="src/bg/coffee_table.png"></img>
+	<img class="gameObject" src="src/bg/fish.png"></img>
+	<img id="mainAquarium" class="gameObject" src="src/bg/aquarium.png"></img>
+	<img class="gameObject" src="src/bg/drawer.png"></img>
+	<img class="gameObject" src="src/bg/clock_monitor.png"></img>
+	<img class="gameObject" src="src/bg/sofa.png"></img>
+	<img id="mainShelf" class="gameObject" src="src/bg/shelf.png"></img>
+	<img id="thread" class="gameObject" src="src/bg/thread_off.png"></img>
+	<img id="lights" class="gameObject"></img>
+	<img id="mainPlant" class="gameObject" src="src/bg/plant.png"></img>
+	<img id="mainPhotos" class="gameObject" src="src/bg/photos.png"></img>
+	<img id="mainCup" class="gameObject" src="src/bg/cup.png"></img>
+	<img id="mainBall" class="gameObject" src="src/bg/ball.png"></img>
+	
+	
+	<p id="clockTime"></p>
+	<div id="shadows"></div>
+	</div>
+		
+  </div>
+  
+	<div id="interactiveScene" class="scene">
+		<div id="cupInteractive" class="InteractiveGameObject" rel="Холодный кофе"></div>
+		<div id="photo1Interactive" class="InteractiveGameObject" rel="Тут мы на осмотре у венитиринара. Не люблю венитиринаров!"> </div>
+		<div id="photo2Interactive" class="InteractiveGameObject" rel="Тут я выгляжу глупо. Почему Василисе она нравится?"> </div>
+		<div id="photo3Interactive" class="InteractiveGameObject" rel="Василиса с мамой и папой. Они часто приезжают к нам на выходных"> </div>
+		<div id="curtainsInteractive" class="InteractiveGameObject"> </div>
+		<div id="plantInteractive" class="InteractiveGameObject" rel="Вкусный цветок"></div>
+		<div id="aquariumInteractive" class="InteractiveGameObject" rel="Рыыыыыбка. Когда-нибудь я тебя поймаю..."></div>
+		<div id="bookInteractive" class="InteractiveGameObject" rel="Альбом со всееееми фотографиями Василисы. Хочешь посмотреть?"></div>
+		<div id="clockInteractive" class="InteractiveGameObject" rel=""></div>
+		<div id="switcherInteractive" class="InteractiveGameObject"> </div>
+		
+		
+		<div id="navigation">
+			<img src="src/home_sign.png" id="homeSign" class="sign"></img>
+			<img src="src/settings_sign.png" id="settingsSign" class="sign"></img>
+		</div>
+		<div id="objectives"></div>
+		<div id="stopTime"  class="InteractiveGameObject"></div>
+		
+		<canvas id="coalKitty"></canvas>
+		
+		<div class="wrapper">
+			<div id="catSayings"></div>
+			<div id="skip"> ОК </div>
+		</div>
+
+		<div id="ballInteractive" class="InteractiveGameObject" rel="Обожаю катать его по полу"></div>
+	</div>
+	
+	<div id="prologue"> 
+		<img id="prologuePhoto" src="src/prologue/1.png"> </img>
+		<img id="golden" src="src/prologue/golden.png"> </img>
+		<div id="prologueText"></div> 
+	</div>
+	
+	<div id="bookMenu">
+		<img id="album" class="albumThing" src="src/album/album.png"></img>
+		<img id="lPhoto" class="albumPhoto albumThing" src="src/album/1.png" rel="Мое фото после купания. Посмотрите, какой я несчастный!"></img>
+		<img id="rPhoto" class="albumPhoto albumThing" src="src/album/2.png" rel="Василиса на костюмированной вечеринке"></img>
+		<img id="frames" class="albumThing" src="src/album/frames.png"></img>
+		<img id="catFrame" class="albumThing" src="src/album/icon.png"></img>
+		
+		<div id="catAlbumSayings" class="albumThing"> </div>
+		
+		<div class="clickButton clickMenuButton " id="closeBookMenu">
+	
+			<p class="closeSettingsMenuText">Закрыть</p>
+		</div>
+		
+		<div class="albumPhotoInteractive" id="lPhotoInteractive"></div>
+		<div class="albumPhotoInteractive"  id="rPhotoInteractive"></div>
+		<img id="left" class="albumThing" src="src/album/left.png"></img>
+		<img id="right" class="albumThing" src="src/album/right.png"></img>
+	</div>
+	
+	<div id="thanksForPlaying"> ПОЗДРАВЛЯЮ! ВЫ ПРОШЛИ ИГРУ!<br>Обновите страницу, чтобы сыграть еще ра3!
+		<div class="clickButton clickMenuButton " id="reloadPage">Обновить</div>
+	</div>
+	
+	<div id="howToPlayMenu" class="menu littleMenu">
+		<p class="menuName">КАК ИГРАТЬ<p>
+		<p>Взаимодействуйте с интерактивными элементами, которые подсвечиваются курсором и погрузитесь в удивительную жизнь милого котика по имени Уголёк и помогите Василисе!</p>
+		<div class="clickButton clickMenuButton " id="closeHowToPlayMenu">
+			<p class="closeSettingsMenuText">Закрыть</p>
+		</div>
+	</div>
+	
+	
+	<div id="settingsMenu" class="menu littleMenu"> 
+	  <p class="menuName">НАСТРОЙКИ</p>
+		<div class="wrapper">
+			<p id="soundName">ГРОМКОСТЬ</p>
+			<input type="range" id="volumeSlider" min="0" max="100" value="50">
+		</div>
+	  <div class="clickButton clickMenuButton " id="closeSettingsMenu">
+		<p class="closeSettingsMenuText">Закрыть</p>
+	  </div>
+	</div>
+	
+	<div id="thanksMenu" class="menu littleMenu">
+    	<p class="menuName">БЛАГОДАРНОСТИ</p>
+		<p id="thanksMenuText">Этот проект я бы не смогла воплотить без поддержки <br><strong> моей мамы </strong> и <strong> Валеры </strong>. Вы мотивировали  меня продолжать работу над проектом!<br>***<br>Огромное спасибо <strong> Валентине Валентиновне </strong> за знания, полученные на занятиях, без которых проект бы не смог стать реальностью.<br>***<br>Привет девочкам из Квинтета - <br><strong> Насте </strong>, <strong> Свете </strong>, <strong> Алисе </strong> и <strong> Маше </strong>  <br>- спасибо за приятные слова!</p>
+		<div class="clickButton clickMenuButton " id="closeThanksMenu">
+			<p class="closeSettingsMenuText">Закрыть</p>
+		</div>
+	</div>
+	
+	<div id="projectDiscriptionMenu" class="menu littleMenu">
+		<p class="menuName">О ПРОЕКТЕ</p>
+		<img id="leftClickMenu"  src="src/album/left.png"></img>
+		<img id="rightClickMenu" src="src/album/right.png"></img>
+		<div id="whatIsIt">
+			<p>Проект интерактивной игры был подготовлен студенткой группы Б03-и.2022 Межевниковой Ангелиной</p> <br>
+			
+		</div>
+		
+		<div id="howItStarted" class="invisibleDivDesc"> 
+			<p class="howItStartedText">Идея пришла мне на ум во время зачета во 2ом семестре 1го курса. А почему бы мне не сделать интерактивную игру, в главной роли будет кот? Во время зачета я и набросала примерно то, как будет выглядеть комната</p>
+			<img id="sketch" src="1.jpg"></img>
+			<p class="howItStartedText1"><strong>Листайте дальше>></strong></p>
+		</div>
+		
+		<div id="howItWasGoing1" class="invisibleDivDesc">
+			<p class="howItStartedText">Но летом проект реализовать не удалось, поэтому использовав новые знания со 2го курса, я сделала его к зачету 3го семестра!</p>
+			<img id="sketch2" src="2.jpg"> </img>
+			<p class="howItWasGoing1Text1">Набросав макет в Фигме я ринулась в бой!<br><strong>Листайте дальше>></strong></p>
+		</div>
+		
+		<div id="howItWasGoing2" class="invisibleDivDesc">
+			<p id="howItWasGoing2Text">История Василисы, которая переезжает в незнакомый город и сталкивается с трудностями возможно покажется кому-то знакомой... Но найдутся люди... или даже коты, которые готовы прийти на помощь. Не бойтесь просить помощи или протянуть руку... или лапу помощи сами тогда, когда чувствуете, что это кому-то необходимо! <br> <strong> Linkii 27.12.2023  </strong></p>
+			
+		</div>
+		
+		
+		<div class="clickButton clickMenuButton " id="closeProjectDiscriptionMenu">
+			<p class="closeSettingsMenuText">Закрыть</p>
+		</div>
+	</div>
+	
+	
+	
+	<div id="exitMenu" class="menu littleMenu">
+		<p class="menuName">ВЫХОД<p>
+		<p id="exitText">Вы действительно хотите выйти? <br>Ваш прогресс не сохранится...</p>
+		<div class="wrapper yesNoWrapper">
+			<div class="clickButton" id="yes">
+				<p class="yesText">Да</p>
+			</div>
+			
+			<div class="clickButton" id="no">
+				<p class="noText">Нет</p>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="clockMenu" class="menu littleMenu"> 
+		<p class="menuName">ИЗМЕНИТЬ ВРЕМЯ<p>
+		<form>
+			<input class="clockChangedText" id="changeClockHours" type="text" placeholder=""></input>
+			<input class="clockChangedText" id="changeClockMinutes" type="text" placeholder=""></input>
+		</form>	
+		<div class="wrapper yesNoWrapper"> 
+			<div class="clickButton" id="save">
+				<p class="yesText">Сохранить</p>
+			</div>
+			
+			<div class="clickButton" id="cancel"> 
+				<p class="noText">Отменить</p>
+			</div>
+		</div>
+	</div>
+	
+	
+  </body>
+</html>

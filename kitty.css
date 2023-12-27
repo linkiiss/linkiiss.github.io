@@ -1,0 +1,575 @@
+* {
+	font-family: Caveat-VariableFont;
+	font-weight: 600;
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-size: 30;
+	cursor: url('src/usualcur.png'), auto;
+}
+audio {}
+strong {
+	background-color: #fcdc04;
+	font-size: 43;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:  100%;
+	
+}
+
+#startScene{ }
+
+.scene {
+	position: fixed;
+}
+#catOnMain {
+	margin-right: 5%;
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    margin-bottom: 5%;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	margin-top: 12%;
+}
+
+.littleMenu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	margin: 0;
+	width: 600px;
+	height: 532px;
+	background-image: url('src/menu_main.png');
+	background-repeat: no-repeat;
+}
+
+.menuName {
+	top: 40px;
+	position: absolute;
+}
+
+#thanksMenu {
+	width: 881px;
+	height: 800px;
+	background-image: url('src/menu_main_big.png');
+}
+#thankfulKitty {
+	position: absolute;
+    top: 475px;
+    width: 30%;
+}
+#closeThanksMenu {
+	margin-top: 74%;
+}
+
+#thanksMenuText {
+	padding-right: 50px;
+    padding-left: 27px;
+    font-size: 38;
+    position: absolute;
+    bottom: 134px;
+}
+
+#settingsMenu {
+	z-index: 10;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.flexColomn {
+	align-items: flex-end;
+    flex-direction: row-reverse;
+}
+#volumeSlider {
+  -webkit-appearance: none; /* Убираем стандартный вид ползунка */
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #f5f58c;
+  outline: 2px;
+  margin-left: 20px;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Убираем стандартный вид бегунка */
+  width: 40px;
+  height: 46px;
+  background: url('src/slider.png');
+}
+
+#projectDiscriptionMenu {
+	width: 881px;
+	height: 800px;
+	background-image: url('src/menu_main_big.png');
+}
+
+#leftClickMenu {
+	display: none;
+	bottom: 45%;
+	position: absolute;
+	right: 869px;
+}
+
+#rightClickMenu {
+	bottom: 45%;
+    position: absolute;
+    left: 869px;
+}
+#sketch {
+	bottom: 192px;
+	position: absolute;
+    right: 225px;
+    width: 50%;
+}
+
+#sketch2 {
+	bottom: 245px;
+	position: absolute;
+    right: 225px;
+    width: 50%;
+}
+
+.howItStartedText {
+	position: absolute;
+    bottom: 458px;
+    left: 45px;
+    right: 61px;
+}
+
+.howItStartedText1 { 
+	position: absolute;
+    right: 282px;
+    bottom: 135px;
+}
+.howItWasGoing1Text1 {
+	position: absolute;
+    right: 132px;
+    bottom: 129px;
+}
+
+#howItWasGoing2Text{
+	bottom: 110px;
+	padding: 58px;
+}
+
+.invisibleDivDesc {
+	display: none;
+}
+#closeProjectDiscriptionMenu {
+	margin-top: 75%;
+}
+#gameName {
+	height: 170px;
+	margin-left: 1%;
+}
+
+ul {
+	margin-top: 20px;
+	text-align: center;
+}
+
+li {
+	list-style-type: none;
+	padding: 15px;
+	border-width: 5px;
+	border-style: none;
+	border-radius: 5px;
+	
+}
+
+p {
+	font-size: 40;
+	text-align: center;
+}
+#shadows {
+	background-color: black;
+	opacity: 40%;
+	width: 1920px;
+	height: 930px;
+}
+#epilogue {
+	display: none;
+	background: black;
+	position: fixed;
+	width: 1920px;
+	height: 930px;
+	align-items: center;
+	justify-content: center;
+}
+#prologue {
+	display: none;
+	background: black;
+	position: fixed;
+	width: 1920px;
+	height: 930px;
+	align-items: center;
+	justify-content: center;
+}
+
+#prologuePhoto {
+	position: absolute;
+}
+
+#epiloguePhoto {
+	position: absolute;
+}
+
+#golden {
+	position: absolute;
+}
+#prologueText {
+	position: absolute;
+	color: #fcdc04;
+	top: 830px;
+	font-size: 40;
+	text-align: center;
+}
+
+#epilogueText {
+	position: absolute;
+	color: #fcdc04;
+	top: 830px;
+	font-size: 40;
+	text-align: center;
+}
+.clickButton {
+	background-image: url('src/button.png');
+	height: 65px;
+	width: 150px;
+	color: white;
+	text-align: center;
+}
+.clickMenuButton {
+	margin-top: 57%;
+	position: absolute;
+}
+
+.yesNoWrapper {
+	position: absolute;
+	margin-top: 50%;
+	gap: 20px;
+}
+#exitText {
+	margin-bottom: 10%;
+}
+
+.closeSettingsMenuText {
+	padding-right: 5px;
+	padding-top: 4px;
+}
+
+#gameScene {
+	display: none;
+}
+
+#gameSceneWrapper {
+	min-height: 930px;
+	min-width: 1920px;
+}
+.gameObject {
+	position: absolute;
+}
+#navigation {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+	margin-top: 10px;
+
+}
+.sign{
+	height: 50px;
+	width: 50px;
+}
+#homeSign {}
+
+#settingsSign {
+	margin-left: 5px;
+}
+
+
+#clock {
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	background-color: black;
+	margin-left: 300px;
+}
+#clockTime {
+	color: white;
+	font-family: NovaSquare;
+	font-size: 35;
+	padding-top: 20.4%;
+	padding-left: 86.5%;
+	position: absolute;
+}
+.clockChangedText {
+	color: white;
+	font-family: NovaSquare;
+	font-size: 50;
+	width: 80px;
+	background-color: #333333;
+}
+
+.InteractiveGameObject {
+	position: absolute;
+	display: inline-block;
+	cursor: url('src/qmark.png'), pointer;
+	/* background: black; */
+
+}
+
+#interactiveScene {
+	min-height: 930px;
+	min-width: 1920px;
+	height: 930px;
+	width: 1920px;
+	display: none;
+}
+
+#cupInteractive {
+	height: 86px;
+    width: 98px;
+    bottom: 407px;
+    left: 895px;
+}
+
+#photo1Interactive {
+	height: 180px;
+    width: 143px;
+    bottom: 723px;
+    left: 768px;
+}
+
+#photo2Interactive {
+	height: 99px;
+    width: 171px;
+    bottom: 740px;
+    left: 926px;
+}
+
+#photo3Interactive {
+	height: 147px;
+    width: 120px;
+    bottom: 742px;
+    left: 1109px;
+}
+
+#aquariumInteractive {
+	height: 137px;
+    width: 184px;
+    bottom: 257px;
+    left: 1140px;
+    border-radius: 68px;
+}
+
+#plantInteractive {
+	height: 453px;
+    width: 118px;
+    bottom: 133px;
+    left: 5px;
+}
+
+#bookInteractive {
+	height: 131px;
+    width: 39px;
+    bottom: 827px;
+    bottom: 792px;
+    left: 429px;
+    rotate: 342deg;
+}
+
+#ballInteractive {
+	height: 110px;
+    width: 110px;
+    bottom: 127px;
+    bottom: 17px;
+    left: 472px;
+    border-radius: 57px;
+}
+
+#clockInteractive {
+	height: 72px;
+    width: 204px;
+    bottom: 487px;
+    left: 1600px;
+    border-radius: 15px;
+	cursor: url('src/usualcur.png'), auto;
+}
+
+#switcherInteractive {
+    height: 49px;
+    width: 45px;
+    bottom: 551px;
+    left: 199px;
+    border-radius: 15px;
+    cursor: url('src/usualcur.png'), auto;
+}
+
+#curtainsInteractive {
+    height: 722px;
+    width: 687px;
+    bottom: 192px;
+    left: 1250px;
+    cursor: url('src/usualcur.png'), auto;
+}
+
+#catSayings {
+	color: #fcdc04;
+	font-size: 40;
+	width: 400px;
+	text-align: center;
+	top: 203px;
+    left: 467px;
+	position: absolute;
+	background-color: black;
+	border-radius: 10px;
+}
+#objectives {
+	position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    color: #fcdc04;
+    font-size: 40;
+    width: 318px;
+    top: 70px;
+    left: 10px;
+}
+
+#skip {
+    background-color: #fcdc04;
+    color: black;
+    width: 50px;
+    position: absolute;
+    top: 351px;
+    left: 816px;
+    border-radius: 5px;
+}
+
+#bookMenu {
+	display: none;
+	background-color: #333333;
+	width: 1300px;
+	height: 800px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: absolute;
+	border-radius: 10px;
+	border: dashed;
+	border-color: white;
+	border-spacing: 15px;
+	border-width: 5px;
+}
+.albumThing {
+	position: absolute;
+}
+.albumPhotoInteractive {
+	position: absolute;
+	height: 259px;
+    width: 229px;
+	/* background: black; */
+	cursor: url('src/qmark.png'), pointer;
+}
+#lPhotoInteractive {
+	top: 235px;
+    left: 184px;
+}
+
+#rPhotoInteractive {
+	    top: 228px;
+    left: 591px;
+}
+
+#right {
+	position: absolute;
+	left: 806px;
+    top: 549px;
+}
+#left {
+	position: absolute;
+	display: none;
+	left: 106px;
+    top: 549px;
+}
+#catAlbumSayings {
+	display: none;
+	background-color: black;
+	color: #fcdc04;
+	width: 348px;
+    height: 100px;
+    top: 100px;
+    left: 932px;
+	text-align: center;
+    justify-content: center;
+    align-items: center;
+	border-radius: 5px;
+	
+}
+#stopTime {
+	height: 19px;
+    width: 31px;
+    bottom: 555px;
+    left: 1762px;
+    background: black;
+    cursor: url('src/usualcur.png'), auto;
+}
+
+#clockMenu {
+	display: none;
+	z-index: 10;
+}
+
+#coalKitty {
+	width: 433px;
+    height: 600px;
+    position: absolute;
+    top: 216px;
+    left: 362px;
+}
+
+
+#thanksForPlaying {
+	align-items: center;
+	justify-content: center;
+	display: none;
+    background-color: black;
+    color: #fcdc04;
+    width: 754px;
+    text-align: center;
+    height: 902px;
+	z-index: 10;
+	border-radius: 15px;
+}
+
+#reloadPage {
+	margin-top: 220px;
+    font-size: 25;
+    padding-top: 12px;
+    padding-right: 4px;
+}
+
+@font-face {
+    font-family: "NovaSquare";
+    src: url(src/fonts/NovaSquare-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Caveat-VariableFont";
+    src: url(src/fonts/Caveat-VariableFont_wght.ttf) format("truetype");
+}
